@@ -24,6 +24,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 .links {
@@ -111,6 +116,7 @@ h1 {
   max-width: 550px;
   border: 1px solid black;
   padding: 10px;
+  text-align: justify;
 }
 
 #quienSomos {
@@ -174,6 +180,7 @@ h2 {
   border: dashed 1px black;
   font-size: 30px;
   color: wheat;
+  text-align: justify;
 }
 
 .losPlatos {
@@ -184,11 +191,49 @@ h2 {
   margin-top: 20px;
 }
 
+#reservas {
+  justify-content: center;
+  padding-top: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.reservas_mapa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.mapa {
+  max-width: 100vw;
+}
+
+#formulas {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  text-align: left;
+  padding: 20px;
+  margin: 20px;
+}
+
+#formulas input {
+  width: 300px;
+}
+
+.pies {
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
 /* ============= button style ========== */
 
 .glow-on-hover {
   width: 220px;
-  height: 50px;
+  height: 35px;
   border: none;
   outline: none;
   color: #fff;
@@ -306,6 +351,19 @@ h2 {
     flex-direction: column;
     gap: 20px;
     justify-content: row;
+  }
+
+  .reservas_mapa {
+    flex-direction: column;
+  }
+
+  .mapa {
+    margin-top: 10px;
+  }
+
+  #formulas {
+    margin: 0px;
+    padding: 0px;
   }
 }
 /* ===============   992px      ============ */
