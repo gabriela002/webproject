@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;1,400&display=swap");
+
+:root {
+  /* fonts */
+
+  --font: "Lato", sans-serif;
+  --light: ;
+  --regular: ;
+  --bold: ;
+  --extra-bold: ;
+
+  /* colores */
+
+  --color-dark: ;
+  --color-medium: ;
+  --color-light: ;
+
+  /* gap */
+
+  --gap: 25px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.links {
+  display: flex;
+  list-style: none;
+}
+
+.links li {
+  text-decoration: none;
+  margin: 0px 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 25px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  color: white;
+}
+
+.icon {
+  display: none;
+  padding: 10px;
+  font-size: 20px;
+  border: 0;
+  background: transparent;
+  color: white;
+}
+
+.Video {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.fullHeight {
+  position: relative;
+  min-height: 100vh;
+}
+
+.videoArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.LOGO {
+  width: 75px;
+}
+
+h1 {
+  z-index: 10;
+  font-size: 40px;
+  color: black;
+  position: relative;
+}
+
+.AreaIMG > img {
+  object-fit: cover;
+  width: 270px;
+  height: 300px;
+}
+
+.AreaIMG {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.areaText {
+  text-align: center;
+  justify-content: center;
+  max-width: 550px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+#quienSomos {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h2 {
+  font-size: 45px;
+}
+
+#platos {
+  text-align: center;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fae9e1;
+}
+
+.Card {
+  width: 300px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+    -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8),
+    inset 0 0 40px rgba(0, 0, 0, 0.1);
+}
+
+.Card button {
+  width: 100px;
+  background-color: black;
+  padding: 5px;
+  color: whitesmoke;
+}
+
+.Card > img {
+  object-fit: cover;
+  width: 300px;
+  height: 200px;
+
+  /* border-bottom: dashed 1px black; */
+}
+
+.cardText {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: dashed 1px black;
+  font-size: 30px;
+  color: wheat;
+}
+
+.losPlatos {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* ============= button style ========== */
+
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* ===========  ends here button style =========== */
+
+/* ===============   992px      ============ */
+
+@media screen and (max-width: 992px) {
+  header > nav {
+    position: fixed;
+    height: 100vh;
+    background-color: antiquewhite;
+    color: black;
+    top: 0px;
+    right: 0px;
+    width: 300px;
+    transform: translateX(300px);
+    transition: 0.5s;
+  }
+
+  .navAtiva {
+    transform: translateX(0);
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .icon {
+    display: inline;
+  }
+
+  .closed {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: black;
+  }
+
+  .AreaIMG {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: row;
+  }
+}
+/* ===============   992px      ============ */
